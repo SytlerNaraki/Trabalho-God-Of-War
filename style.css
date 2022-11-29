@@ -1,0 +1,694 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: black;
+  padding: 0px;
+  height: 100vh;
+  justify-content: center;
+}
+
+
+/* barra nav */
+
+.barradecima {
+  background-color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90PX;
+  display: flex;
+  align-items: center;
+  z-index: +1000;
+}
+
+/* posição da nav */
+
+.posicaonav {
+  float: left;
+}
+
+/* elementos de escrita da nav */
+
+.posicaoelementosnav {
+  display: block;
+  color: #3775b3;
+  text-shadow: 2px 1px 1px black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 144vh;
+  top: 0vh;
+  animation: nav 2s ease-in-out;
+  z-index: 0;
+  font-family: "god of war";
+}
+
+
+/* Mudar a cor dos elementos quando passa o mouse em cima*/
+.posicaoelementosnav:hover {
+  background-color: white;
+}
+
+/* carrosel de videos e img */
+.scroll {
+  overflow-x: scroll;
+}
+
+.videna {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+.posicaovide {
+  float: left;
+  align-items: center;
+  width: 320;
+  height: 240;
+}
+
+.elementosvide {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.paisagem {
+  width: 320;
+  height: 240;
+  background-size: cover;
+  position: relative;
+  top: 2vh;
+
+}
+
+/* imagem de fundo*/
+
+.fundo1 {
+  background-image: url("fundo1.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  top: 0vh;
+  z-index: -1000;
+  display: inline-block;
+}
+
+.fundo2 {
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  bottom: 0.5vw;
+}
+
+/*logo na parte de cima*/
+
+.logo {
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 0vh;
+}
+
+/*Carossel de videos*/
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1; }
+  .owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    touch-action: manipulation;
+    -moz-backface-visibility: hidden;
+    /* fix firefox animation glitch */ }
+  .owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; }
+  .owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    /* fix for flashing background */
+    -webkit-transform: translate3d(0px, 0px, 0px); }
+  .owl-carousel .owl-wrapper,
+  .owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0); }
+  .owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; }
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 100%; }
+  .owl-carousel .owl-nav.disabled,
+  .owl-carousel .owl-dots.disabled {
+    display: none; }
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next,
+  .owl-carousel button.owl-dot {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit; }
+  .owl-carousel.owl-loaded {
+    display: block; }
+  .owl-carousel.owl-loading {
+    opacity: 0;
+    display: block; }
+  .owl-carousel.owl-hidden {
+    opacity: 0; }
+  .owl-carousel.owl-refresh .owl-item {
+    visibility: hidden; }
+  .owl-carousel.owl-drag .owl-item {
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel.owl-grab {
+    cursor: move;
+    cursor: grab; }
+  .owl-carousel.owl-rtl {
+    direction: rtl; }
+  .owl-carousel.owl-rtl .owl-item {
+    float: right; }
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block; }
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  animation-duration: 1000ms;
+  animation-fill-mode: both; }
+
+.owl-carousel .owl-animated-in {
+  z-index: 0; }
+
+.owl-carousel .owl-animated-out {
+  z-index: 1; }
+
+.owl-carousel .fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  transition: height 500ms ease-in-out; }
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item {
+  /**
+			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+			calculation of the height of the owl-item that breaks page layouts
+		 */ }
+  .owl-carousel .owl-item .owl-lazy {
+    opacity: 0;
+    transition: opacity 400ms ease; }
+  .owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
+    max-height: 0; }
+  .owl-carousel .owl-item img.owl-lazy {
+    transform-style: preserve-3d; }
+
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform 100ms ease; }
+
+.owl-carousel .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+      transform: scale(1.3, 1.3); }
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none; }
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
+@font-face {
+  font-family: 'god of war';
+  src: url(GODOFWAR.TTF) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "god of war";
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+}
+
+.imagem2 {
+  display: inline-block;
+  position: relative;
+}
+
+.imagem2 h2 {
+  position: absolute;
+  margin-left: 5vw;
+  left: 0px;
+  top: 5vw;
+  right: 20px;
+  font-size: 4vw;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagem2 p {
+  position: absolute;
+  margin-left: 5vw;
+  left: 0px;
+  top: 36vw;
+  right: 20px;
+  font-size: 1.2vw;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*card images*/
+/*carousel persornanegns*/
+.card-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-carousel .my-card {
+  height: 20rem;
+  width: 12rem;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: scale(0.6) translateY(-2rem);
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  background: #2e5266;
+  background: linear-gradient(to top, #0056a6, #000000);;
+  transition: 1s;
+}
+
+.card-carousel .my-card:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 100%;
+  background-color: rgba(0,0,0,0.3);
+  bottom: -5rem;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.card-carousel .my-card:nth-child(0):before {
+  content: '0';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(1):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(2):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(3):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(4):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(5):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(6):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(7):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(8):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card:nth-child(9):before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.card-carousel .my-card.active {
+  z-index: 3;
+  -webkit-transform: scale(1) translateY(0) translateX(0);
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 1s;
+}
+
+.card-carousel .my-card.prev, .card-carousel .my-card.next {
+  z-index: 2;
+  -webkit-transform: scale(0.8) translateY(-1rem) translateX(0);
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+}
+.app-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+/* fundo do player */
+
+.player {
+  background: linear-gradient(to top, #000000, #0056a6);;
+  padding: 100px 50px;
+  width: 414px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* capas */
+
+.song-img {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  background-color: #ffff;
+  border-radius: 2%;
+  box-shadow: 0px 2px 20px rgba(243, 243, 235, 0.6);
+
+  margin-bottom: 50px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.song-img:after {
+  content: '';
+  padding-top: 100%;
+  display: block;
+}
+
+/* contorno nenon da imagem
+.song-img:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid #E300c4;
+  border-radius: 2%;
+}*/
+
+.song-details {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.song-details h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.song-details h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.player-controls .play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: linear-gradient(to top, #ffffff, #000000);;
+  color: #101010;
+  margin: 0 30px;
+  border: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+
+  /*box-shadow: 0px 6px 12px rgba(248, 252, 33, 0.6);*/
+  transition: 0.4s;
+}
+
+.player-controls .skip-btn {
+  background: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+
+  color: #CCC;
+}
+
+.player-controls .play:hover {
+  box-shadow: 0px 2px 20px rgba(243, 243, 235, 0.6);
+}
+
+.next-up p {
+  color: #888;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.next-up p span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media (max-width: 414px) {
+  .player {
+      min-height: 100vh;
+      border-radius: 0px;
+      padding: 75px 30px;
+  }
+}
+.grafico{
+  width: 50%; /*tamanho lateral do grafico*/ 
+  background-color: white;
+ /* height: 225px; altura do grafico*/
+  align-items: center;
+  margin-left: 25%;
+}
+
+.nome{
+  width: 35%;
+  background-color: #0056a6;
+  height: 20px;
+  float: left;
+  border-radius: 10px 0px 0px 15px;
+
+}
+.valor{
+  width: 65%;
+  background-color: #0056a6;
+  height: 20px;
+  float: right;
+  border-radius: 0px 30px 18px 0px;
+}
+.nome_centralizado{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  font-family: inherit;
+}
+.insert_valor{
+  background-color: #000000;
+  height: 14px;
+  color: white;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-family: inherit;
+  text-align: center;
+}
+.nome,.valor{
+  margin-bottom: 5px;
+  box-shadow: 0 0 2px black;
+}

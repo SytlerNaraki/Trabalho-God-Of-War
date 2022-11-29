@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Projeto god</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="animation.css">
+  <link rel="icon" type="image/x-icon" href="img/logo.ico">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+  <script src="carouselperson.js"></script>
+  <script src="https://kit.fontawesome.com/79b5047e4f.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <style>
+    @font-face {
+      font-family: 'god of war';
+      src: url(GODOFWAR.TTF) format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'RUNAS';
+      src: url(RUNE.TTF) format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body style="background-color:#000000">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logogod.png" alt="..." width="125" height="70">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a style="font-family:god of war" class="nav-link " aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family:god of war" class="nav-link" href="sobre.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family:god of war" class="nav-link active" href="dados.html">Dados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><br><br>
+  <div style="display: inline-block; position:relative; width:98vw;z-index: 1;">
+    <img src="img/lua.png" width="150" height="auto" style="margin-left: 1vw;position: fixed;">
+    <img src="img/sol.png" width="150" height="auto" style="margin-left: 89vw;position: fixed;">
+  </div>
+  <div>
+    <h1 style="text-align: center; display:block;background-color: #000000;font-size: 2.5vw;">Notas dos games da
+      franquia
+    </h1>
+  </div>
+  <div style="width: 30vw; margin-left: 35%;">
+    <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
+  <div style="width: 100%; height:auto;">
+    <p style="color: white; text-align: center; position: relative; top: 1vw; font-family: inherit;">Toda a franquia
+      God
+      Of War sempre foi muito aclamada pela midia especializada e pelos os usuarios.<br>
+      Os jogos sempre tiveram uma grande adesão do publico. A franquia recebeu diversos prêmios,<br> incluindo vários
+      reconhecimentos de Jogo do Ano para os títulos de 2005 e 2018.
+      Alguns jogos<br> também foram remasterizados para plataformas mais recentes da PlayStation. Até novembro<br> de
+      2020, a franquia vendeu
+      mais de 51 milhões de unidades em todo o mundo. Gof Of War <br> Ragnarok deverá seguir o mesmo padrão de altas
+      notas, e até superar a nota mais alta,<br> que é a do game de 2018,
+      os fans estão com expectativas altissimas
+    </p>
+  </div><br><br>
+  <div style="position: relative;width: 100%;height: 23.4vw;">
+    <p style="color: white;position: absolute;margin-left: 25%;top: 4vw; font-family: inherit;">God Of War Ragnarök
+      contará com cenas<br>
+      famosas da mitologia. Desde seres como<br> Jörmungandr, até skol e hati perserguindo
+      e <br>devorando o sol e a lua
+    </p>
+    <video width="320" height="auto" loop autoplay muted preload="none"
+      style="float: right;margin-right: 25%; border-radius: 2vw;">
+      <source src="videos/luaesol.mp4" type="video/mp4">
+    </video>
+  </div>
+  <br><br><br>
+  <div>
+    <h1
+      style="text-align: center; display:block;background-color: #000000;font-size: 2.5vw; position: relative; top: 5vw;">
+      Explore a serie</h1>
+  </div>
+  <ul style="display:flex; justify-content: space-around; list-style: none;padding: 10vw;">
+    <li style="color: white;">
+      <img src="img/god1.jpg" alt="god" style="border-radius: 2vw; width: 18vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> God Of War</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Data de lançamento<br> original: 2005<br>
+        Lançamento original: PS2</p>
+    </li>
+    <li style="color: white;">
+      <img src="img/god2.jpg" alt="god" style="border-radius: 2vw; width: 18vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> God Of War II</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Lançamento original: PS2<br>
+        Data de lançamento<br> original: 2007</p>
+    </li>
+    <li style="color: white;">
+      <img src="img/godchains.jpg" alt="god" style="border-radius: 2vw; width: 18vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> God of War:<br> Chains of<br> Olympus</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Lançamento original: PSP<br>
+        Data de lançamento<br> original: 2008</p>
+    </li>
+    <li style="color: white;">
+      <img src="img/god3.jpg" alt="god" style="border-radius: 2vw; width: 18vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> God of War III</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Lançamento original: PS3<br>
+        Data de lançamento<br> original: 2010
+    </li>
+  </ul>
+  <ul
+    style="display:flex; justify-content: space-around; list-style: none;padding: 10vw; position: relative; bottom: 21vw;">
+    <li style="color: white;">
+      <img src="img/godsparta.jpg" alt="god" style="border-radius: 2vw; width: 18vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> God of War:<br> Ghost of Sparta</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Lançamento original: PSP<br>
+        Data de lançamento<br> original: 2010
+    </li>
+    <li style="color: white;">
+      <img src="img/godascension.jpg" alt="god" style="border-radius: 2vw; width: 18vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> God of War:<br> Ascension</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Lançamento original: PS3<br>
+        Data de lançamento<br> original: 2013
+    </li>
+    <li style="color: white;">
+      <img src="img/god2018.jpg" alt="god" style="border-radius: 2vw; width: 18vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> God of War</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Lançamento original: PS4<br>
+        Data de lançamento<br> original: 2018
+    </li>
+    <li style="color: white;">
+      <img src="img/godragnarok.jpg" alt="god" style="border-radius: 2vw; width: 18vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> God of War<br> Ragnarök</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Lançamento original: PS5 e PS4<br>
+        Data de lançamento: 9 de<br> novembro de 2022
+    </li>
+  </ul>
+  <div style="background-color: #00439c; height: 4.4vw; text-align: center; position: relative;">
+    <i class="fa-brands fa-playstation" style="color: white; position: relative; top: 2vw;"></i>
+    <p style="color: white;position: relative; top: 2vw; display: inline-block;">© 2022 Marcola do codigo
+      Entertainment
+      LLC</p>
+  </div>
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['God Of War I', 'God Of War II', 'God Of War Chains Of Olimpus', 'God Of War III', 'God Of War Ghost Of Sparta', 'God Of War Ascension',
+          'God Of War 2018', 'God Of War Ragnarok'
+        ],
+        datasets: [{
+          label: 'Notas',
+          data: [94, 93, 91, 92, 85, 80, 94, 98],
+          backgroundColor: [
+            'rgba(0, 67, 156, 1)',
+            'rgba(0, 67, 156, 1)',
+            'rgba(0, 67, 156, 1)',
+            'rgba(0, 67, 156, 1)',
+            'rgba(0, 67, 156, 1)',
+            'rgba(0, 67, 156, 1)',
+            'rgba(0, 67, 156, 1)',
+            'rgba(0, 67, 156, 1)',
+          ],
+          borderColor: [
+          'white',
+          ],
+          borderWidth: 1,
+          hoverBorderWidth: 5,
+        }]
+      },
+      options: {
+        scales: {
+          indexAxis: 'x',
+        }
+      }
+    });
+  </script>
+
+</body>

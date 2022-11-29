@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Projeto god</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="animation.css">
+  <link rel="icon" type="image/x-icon" href="img/logo.ico">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/bootstrap.js"></script>
+  <!-- <script src="carouselperson.js"></script> -->
+  <script src="https://kit.fontawesome.com/79b5047e4f.js" crossorigin="anonymous"></script>
+  <style>
+    @font-face {
+      font-family: 'god of war';
+      src: url(GODOFWAR.TTF) format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'RUNAS';
+      src: url(RUNE.TTF) format('truetype');
+      font-weight: normal;
+    }
+
+    .parent-box {
+      background-color: black;
+      display: flex;
+    }
+
+    .box {
+      width: 320px;
+      height: 220px;
+      background: linear-gradient(to top, #0056a6, #000000);
+      ;
+      margin: 10px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0 !important;
+      font: inherit;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    /* #WEB SURAJ# */
+
+    .owl-carousel .owl-nav button.owl-next {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0 !important;
+      font: inherit;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+    }
+
+    /* myslider */
+    /* .position_slider {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 100;
+    } */
+    .my_slider {
+      width: 99vw;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .image_box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300vw;
+    }
+
+    .img_my_slider {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: unset;
+      width: 99vw;
+    }
+
+    .img_my_slider+.img_my_slider {
+      margin-left: -5px;
+    }
+
+    .my_slider_buttons {
+      position: relative;
+    }
+
+    .my_slider_buttons span {
+      position: absolute;
+      color: white;
+      cursor: pointer;
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+    .slider_prev {
+      left: 0;
+    }
+
+    .slider_next {
+      right: 0;
+    }
+
+    /*  */
+    .carousel-wrapper {
+      height: 50vw;
+      position: relative;
+      width: 100vw;
+      display: block;
+      margin: 50px auto;
+      border: 2px solid black;
+    }
+
+    .carousel-item {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .arrow {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+    }
+
+    .arrow-prev {
+      left: 30px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(135deg);
+
+    }
+
+    .arrow-next {
+      right: 30px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    [id^="item"] {
+      display: none;
+    }
+
+    .item-1 {
+      z-index: 2;
+      opacity: 1;
+      background: url("fundo1.jpg");
+      background-size: cover;
+    }
+
+    .item-2 {
+      background: url("fundo1.jpg");
+      background-size: cover;
+    }
+
+    .item-3 {
+      background: url("fundo1.jpg");
+      background-size: cover;
+    }
+
+    *:target~.item-1 {
+      opacity: 0;
+    }
+
+    #item-1:target~.item-1 {
+      opacity: 1;
+
+    }
+
+    #item-2:target~.item-2,
+    #item-3:target~.item-3 {
+      z-index: 3;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body style="background-color: black;">
+  <!-- partial:index.partial.html -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/logogod.png" alt="..." width="125" height="70">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a style="font-family:god of war" class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family:god of war" class="nav-link" href="sobre.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family:god of war" class="nav-link" href="dados.html" href="#">Dados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="position_slider">
+    <div class="my_slider">
+      <div class="image_box">
+        <img class="img_my_slider" src="img/fundo1.jpg" alt="">
+        <img class="img_my_slider" src="img/fundo2.jpg" alt="">
+        <img class="img_my_slider" src="img/paisagem2.jpg" alt="">
+      </div>
+    </div>
+    <div class="my_slider_buttons">
+      <span class="slider_prev"><i style="background-color: #00439c;" class="fas fa-chevron-left"></i></span>
+      <span class="slider_next"><i style="background-color: #00439c;" class="fas fa-chevron-right"></i></span>
+    </div>
+  </div>
+  </br></br>
+  </header>
+  <div class="parent-box owl-carousel" style="width: 300;">
+    <div class="box">
+      <iframe loading="eager" width="320" height="220" src="https://www.youtube.com/embed/x6oF3Jxu7X0?start=10"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="box">
+      <iframe loading="eager" width="320" height="220" src="https://www.youtube.com/embed/0N4J-7gsaGc?start=3"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="box">
+      <iframe width="320" height="220" src="https://www.youtube.com/embed/sRFyJWKZuEM?start=3"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="box">
+      <iframe width="320" height="220" src="https://www.youtube.com/embed/sAgTZqZQvXQ?start=6"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <div class="box">
+      <iframe width="320" height="220" src="https://www.youtube.com/embed/kb3aWGRzKf4?start=3"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+
+  <br>
+  <div class="imagem2">
+    <img class="fundo2" src="img/kratosefreya.jpg" alt="Girl in a jacket">
+    <h2>Embarque com Kratos e<br>
+      Atreus em uma jornada<br>
+      épica emocionante<br>
+      sobre apego e<br>
+      superacao<br>
+    </h2>
+    <p>Do Santa Monica Studio, esta é a sequência da aclamada versão de 2018</br>
+      de God of War. O Fimbulwinter já começou. Kratos e Atreus devem viajar</br> pelos Nove Reinos em busca de
+      respostas enquanto as forças asgardianas</br>
+      se preparam para uma batalha profetizada que causará o fim do mundo.</br> Nessa jornada, eles explorarão
+      paisagens míticas
+      impressionantes e </br>enfrentarão inimigos aterradores: deuses nórdicos e monstros. A ameaça</br> do Ragnarök
+      se aproxima.
+      Kratos e Atreus terão de escolher entre a </br>segurança deles próprios e a dos reinos..</p>
+  </div>
+
+  <h1 style="text-align: center; display:block;background-color: black;font-size: 2.5vw;">A SAGA NORDICA CONTINUA</h1>
+  <br><br><br><br>
+  <ul style="display:flex; justify-content: space-around; list-style: none;">
+    <li style="color: white;">
+      <img src="img/box1.jpg" alt="god" style="border-radius: 2vw; width: 28vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> Um futuro não escrito</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">Atreus busca conhecimento para entender a profecia de<br> "Loki"
+        e
+        definir o papel dele no Ragnarök. Kratos deve se<br>
+        desacorrentar do medo de repetir erros do passado para<br> ser o pai que Atreus precisa.</p>
+    </li>
+    <li style="color: white;">
+      <img src="img/box2.jpg" alt="god" style="border-radius: 2vw; width: 28vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> Instrumentos de guerra</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">O Machado Leviatã, as Lâminas do Caos e o Escudo<br> Guardião
+        retornam
+        junto com uma série de novas<br> habilidades para Kratos e Atreus. As habilidades<br> espartanas letais de
+        Kratos serão
+        postas à prova na luta<br> contra deuses e monstros dos Nove Reinos em defesa<br> da família dele.
+    </li>
+    <li style="color: white;">
+      <img src="img/box3.jpg" alt="god" style="border-radius: 2vw; width: 28vw;height: 17vw;">
+      <h2 style="font-size: 2vw;"> Instrumentos de guerra</h2>
+      <p style="font-size: 1.1vw; font-family:inherit;">O Machado Leviatã, as Lâminas do Caos e o Escudo<br> Guardião
+        retornam
+        junto com uma série de novas<br> habilidades para Kratos e Atreus. As habilidades<br> espartanas letais de
+        Kratos serão
+        postas à prova na luta<br> contra deuses e monstros dos Nove Reinos em defesa<br> da família dele.
+    </li>
+  </ul>
+
+  <br><br><br><br>
+  <div>
+    <h1 style="text-align: center;display:block;background-color: black;font-size: 2.5vw;">
+      DEUSES E OUTROS PERSONAGENS</h1><br><br><br><br>
+  </div>
+  <div class="card-carousel" style="position: relative; ">
+    <div class="my-card"><img src="img/freya.jpg" alt="thor" height="314em" ;width="12rem;">
+      <h1 style="position: relative;bottom: 3vw;">
+        freya</h1>
+    </div>
+    <div class="my-card"><img style="position: relative; right:1vw;" src="img/tyr.png" alt="tyr" height="314em"
+        ;width="12rem;">
+      <h1 style="position: relative;bottom: 3vw;">
+        Tyr</h1>
+    </div>
+    <div class="my-card"><img src="img/thor.jpg" alt="freya" height="314em" ;width="12rem;">
+      <h1 style="position: relative;bottom: 3vw;">
+        Thor</h1>
+    </div>
+    <div class="my-card"><img style="position: relative; right:3vw" src="img/brokesindri.jpg" alt="brokesindri"
+        height="314em" ;width="12rem;">
+      <h1 style="position: relative;bottom: 6vw;">
+        Brok e Sindri</h1>
+    </div>
+    <div class="my-card"><img style="position: relative; right:2vw;" src="img/kratos.jpg" alt="kratos" height="314em"
+        ;width="12rem;">
+      <h1 style="position: relative;bottom: 3vw;">
+        kratos</h1>
+    </div>
+    <div class="my-card"><img src="img/atreus.jpg" alt="thor" height="314em" ;width="12rem;">
+      <h1 style="position: relative;bottom: 3vw;">
+        Atreus</h1>
+    </div>
+    <div class="my-card"><img src="img/angrboda.jpg" alt="angrboda" height="314em" ;width="12rem;">
+      <h1 style="position: relative;bottom: 3vw;">
+        angrboda</h1>
+    </div>
+    <div class="my-card"><img src="img/mimir.png" alt="mimir" height="280em" ;width="12rem;">
+      <h1 style="position: relative;bottom: 2vw;">
+        Mimir</h1>
+    </div>
+    <div class="my-card"><img src="img/durlin.png" alt="durlin" height="270em" ;width="12rem;">
+      <h1 style="position: relative;bottom: 3vw;">
+        Durlin</h1>
+    </div>
+  </div>
+  </div>
+  </div><br><br><br><br><br><br><br><br>
+
+  <h1 style="text-align: center; display:block;background-color: black;font-size: 2.5vw;position: relative; ">A TRILHA
+    SONORA</h1>
+  <div>
+    <p style="color: white;position: relative;;text-align: center; font-family: arial;">Um dos pontos mais fortes de
+      toda a saga God Of War, é a sua trilha sonora. Nessa <br>nova jornada Kratos e Atreus estarão
+      acompanhados de um trilha sonora do grande<br> compositor Bear McCreary. A trilha deverá seguir o mesmo estilo
+      do game de 2018<br> com uma pitada de drama e melancolia,
+      mas não deixando as raizes de um trilha mais<br> pesada como a trilogia classica.
+      Escute abaixo alguns exemplos
+    </p>
+  </div><br><br><br>
+  <div class="app-wrapper">
+    <div style="position: relative;" class="player">
+      <!-- transições e ações internas do player-->
+      <audio id="music-player"></audio>
+      <div id="song-image" class="song-img" style="background-image: url('./assets/images/m2.png');"></div>
+      <div class="song-details">
+        <h2 id="song-title">Lorem ipsum dolor</h2>
+        <h3 id="song-artist">By MixKit</h3>
+      </div>
+      <div class="player-controls">
+        <button id="prev-btn" class="skip-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="play-btn" class="play"><i id="play-icon" class="fas fa-play"></i></button>
+        <button id="next-btn" class="skip-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="next-up">
+        <p>A seguir: <span id="song-next-up">Lorem ipsum dolor</span></p>
+      </div>
+    </div>
+  </div><br><br><br><br>
+  <div style="background-color: #00439c; height: 4.4vw; text-align: center;">
+    <i class="fa-brands fa-playstation" style="color: white; position: relative; top: 2vw;"></i>
+    <p style="color: white;position: relative; top: 2vw; display: inline-block;">© 2022 Marcola do codigo Entertainment
+      LLC</p>
+  </div>
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+    crossorigin="anonymous"></script>
+  <script>
+    $num = $('.my-card').length;
+    $even = $num / 2;
+    $odd = ($num + 1) / 2;
+
+    if ($num % 2 == 0) {
+      $('.my-card:nth-child(' + $even + ')').addClass('active');
+      $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
+      $('.my-card:nth-child(' + $even + ')').next().addClass('next');
+    } else {
+      $('.my-card:nth-child(' + $odd + ')').addClass('active');
+      $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
+      $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+    }
+
+    $('.my-card').click(function () {
+      $slide = $('.active').width();
+      console.log($('.active').position().left);
+
+      if ($(this).hasClass('next')) {
+        $('.card-carousel').stop(false, true).animate({ left: '-=' + $slide });
+      } else if ($(this).hasClass('prev')) {
+        $('.card-carousel').stop(false, true).animate({ left: '+=' + $slide });
+      }
+
+      $(this).removeClass('prev next');
+      $(this).siblings().removeClass('prev active next');
+
+      $(this).addClass('active');
+      $(this).prev().addClass('prev');
+      $(this).next().addClass('next');
+    });
+
+
+    // Keyboard nav
+    $('html body').keydown(function (e) {
+      if (e.keyCode == 37) { // left
+        $('.active').prev().trigger('click');
+      }
+      else if (e.keyCode == 39) { // right
+        $('.active').next().trigger('click');
+      }
+    });
+  </script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <script src="jquery.js"></script>
+  <script src="owl.carousel.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: false,
+      margin: 0,
+      nav: true,
+      items: 9,
+      Boolean: false,
+      autoplay: true,
+      autoplayTimeout: 6000,
+      responsive: {
+        0: {
+          items: 1
+        },
+
+        480: {
+          items: 2
+        },
+
+        768: {
+          items: 3
+        },
+
+        992: {
+          items: 4
+        }
+
+
+      }
+    });
+
+    //my slider
+    $(document).ready(function () {
+      set_carrousel_height();
+      $(window).on('resize', function () {
+        set_carrousel_height();
+      });
+      $(".slider_prev").hide();
+
+      var tempo = 800;
+      size_image = $(".img_my_slider:first").width();
+
+      $(".slider_next").on("click", function () {
+        current_position = $(".image_box").position();
+        if (current_position.left > -(size_image * 2)) {
+          $(".image_box").animate({ left: current_position.left - size_image }, tempo, function () {
+            $(".slider_prev").show();
+          });
+        }
+        if (current_position.left == -size_image) {
+          $(".slider_next").hide();
+        }
+      });
+
+      $(".slider_prev").on("click", function () {
+        current_position = $(".image_box").position();
+        if (current_position.left < (size_image * 2)) {
+          $(".image_box").animate({ left: current_position.left + size_image }, tempo, function () {
+            $(".slider_next").show();
+          });
+        }
+        if (current_position.left == -size_image) {
+          $(".slider_prev").hide();
+        }
+      });
+    });
+
+    function set_carrousel_height() {
+      // console.log();
+      var button_height = $(".my_slider_buttons span:first").height();
+      var img_height = $(".img_my_slider:first").height();
+      $(".my_slider").height(img_height);
+      $(".my_slider_buttons span").css('top', -((img_height + button_height) / 2));
+    }
+  </script>
+</body>
+
+</html>
